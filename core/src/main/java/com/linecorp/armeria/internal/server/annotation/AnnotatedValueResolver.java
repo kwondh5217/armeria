@@ -467,8 +467,6 @@ final class AnnotatedValueResolver {
                     throw new IllegalArgumentException(
                         String.format("Invalid @Param annotation on Map parameter: '%s'. " +
                                 "The @Param annotation specifies a value ('%s'), which is not allowed. " +
-                                "When using a Map, @Param must not specify a value. " +
-                                "Please use @Param Map<String, Object> param without a value.",
                             annotatedElement, param.value()));
                 }
                 return ofQueryParamMap(name, annotatedElement, typeElement, type, description);
